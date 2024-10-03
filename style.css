@@ -45,9 +45,10 @@ html, body {
     justify-content: space-between;
     padding: 5px;
     width: 290px;
+    /* line-break: anywhere; */
     margin: 5px;
     background-color: rgb(254, 252, 252);
-    /* box-sizing: border-box; */
+    box-sizing: border-box;   
     outline: none;
 }
 .title {
@@ -72,7 +73,53 @@ html, body {
     object-fit:cover;
 }
 
+.filter {
+    display: flex;
+    /* justify-content: space-between; */
+}
+
 .filter-btn {
     margin: 10px;
+    cursor: pointer;
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.shimmer-card {
+    margin: 5px;
+    width: 290px;
+    height: 400px;
+    background-color: #f0f0f0;
+}
+
+.login-box {
+    display: flex;
+    align-items: center;
+
+}
+.login {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    border: 1px solid rgb(219, 104, 16);
+    border-radius: 25px;
+    text-decoration: none;
+    outline: none;
+}
+
+.login:hover {
+    background-color: rgb(219, 104, 16);
+    color: #fff;
+}
+
+.search-btn {
+    padding: 0 10px;
+    margin-left: 10px;
     cursor: pointer;
 }
