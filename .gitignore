@@ -1,6 +1,5 @@
 /node_Modules
 /.parcel-cache
-/dist
 /coverage
 
 // const parent = React.createElement("div",{id: "parent"},
