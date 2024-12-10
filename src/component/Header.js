@@ -39,7 +39,7 @@ const Header = () => {
                     <li className="hidden sm:block px-2 text-lg font-semibold cursor-pointer hover:text-orange-600"><Link to="/contact">contact</Link></li>
                     <li className="bloack px-2 text-lg font-semibold cursor-pointer hover:text-orange-600"><Link to="cart">cart({carItem.length})</Link></li>
                     <div className="hidden sm:block px-2 text-lg font-semibold cursor-pointer hover:text-orange-600">
-                        <button className='login'>login</button>
+                        <button className='login'><Link to={"/login"}> login </Link></button>
                     </div>
                     {/* <li className="px4 text-lg font-semibold cursor-pointer hover:text-orange-600">{loggedInUser}</li> */}
                     

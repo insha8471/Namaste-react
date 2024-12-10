@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RES_LIST_API } from "./constants";
+import { corsProxy, RES_LIST_API } from "./constants";
 
 const useListOfRestaurant = (setFilterListOfRestaurant) => {
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
@@ -9,7 +9,7 @@ const useListOfRestaurant = (setFilterListOfRestaurant) => {
     },[])
     
     const fetchData = async () => {
-            const data = await fetch(RES_LIST_API);
+            const data = await fetch(corsProxy + RES_LIST_API);
             
             const json = await data.json();
             console.log(json)

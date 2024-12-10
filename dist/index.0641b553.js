@@ -2977,6 +2977,8 @@ var _contact = require("./component/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _appStore = require("./utils/appStore");
 var _appStoreDefault = parcelHelpers.interopDefault(_appStore);
+var _login = require("./component/Login");
+var _loginDefault = parcelHelpers.interopDefault(_login);
 var _s = $RefreshSig$();
 const AppLayout = ()=>{
     _s();
@@ -2999,28 +3001,28 @@ const AppLayout = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 31,
+                        lineNumber: 32,
                         columnNumber: 21
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                         fileName: "src/app.js",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 21
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/app.js",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 17
             }, undefined)
         }, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 13
         }, undefined)
     }, void 0, false, {
         fileName: "src/app.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 9
     }, undefined);
 };
@@ -3031,7 +3033,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 42,
+            lineNumber: 43,
             columnNumber: 18
         }, undefined),
         children: [
@@ -3039,7 +3041,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 46,
+                    lineNumber: 47,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3047,7 +3049,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 50,
+                    lineNumber: 51,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3055,7 +3057,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantMenuDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 53,
+                    lineNumber: 54,
                     columnNumber: 26
                 }, undefined)
             },
@@ -3063,7 +3065,7 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 57,
+                    lineNumber: 58,
                     columnNumber: 25
                 }, undefined)
             },
@@ -3071,14 +3073,22 @@ const AppRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/app.js",
-                    lineNumber: 61,
+                    lineNumber: 62,
+                    columnNumber: 26
+                }, undefined)
+            },
+            {
+                path: "/login",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 66,
                     columnNumber: 26
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 64,
+            lineNumber: 69,
             columnNumber: 23
         }, undefined)
     }
@@ -3088,7 +3098,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: AppRouter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 72,
+    lineNumber: 77,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3099,7 +3109,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-redux":"62sf7","./component/About":"94Koj","./component/Body":"iizf5","./component/Error":"cosKY","./component/Header":"knXDc","./component/RestaurantMenu":"kMuXm","./utils/UserContext":"c5vgB","react-router-dom":"9xmpe","./component/Cart":"dclnc","./component/Contact":"3He1d","./utils/appStore":"6A5Ux","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-redux":"62sf7","./component/About":"94Koj","./component/Body":"iizf5","./component/Error":"cosKY","./component/Header":"knXDc","./component/RestaurantMenu":"kMuXm","./utils/UserContext":"c5vgB","react-router-dom":"9xmpe","./component/Cart":"dclnc","./component/Contact":"3He1d","./utils/appStore":"6A5Ux","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./component/Login":"fhkpV"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -36068,7 +36078,7 @@ const useListOfRestaurant = (setFilterListOfRestaurant)=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch((0, _constants.RES_LIST_API));
+        const data = await fetch((0, _constants.corsProxy) + (0, _constants.RES_LIST_API));
         const json = await data.json();
         console.log(json);
         setListOfRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -36091,10 +36101,12 @@ parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
 parcelHelpers.export(exports, "RES_LIST_API", ()=>RES_LIST_API);
 parcelHelpers.export(exports, "Menu_API", ()=>Menu_API);
+parcelHelpers.export(exports, "corsProxy", ()=>corsProxy);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 const LOGO_URL = "https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png";
 const RES_LIST_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
 const Menu_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=";
+const corsProxy = "https://proxy.cors.sh/";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"181Ji":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a38f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -36433,6 +36445,8 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$74a9.prelude(module);
 
 try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Offline = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
@@ -36442,6 +36456,7 @@ const Offline = ()=>{
     }, undefined);
 };
 _c = Offline;
+exports.default = Offline;
 var _c;
 $RefreshReg$(_c, "Offline");
 
@@ -36450,7 +36465,7 @@ $RefreshReg$(_c, "Offline");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bIIDQ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bIIDQ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2b72 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36689,7 +36704,14 @@ const Header = ()=>{
                                 className: "hidden sm:block px-2 text-lg font-semibold cursor-pointer hover:text-orange-600",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                     className: "login",
-                                    children: "login"
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/login",
+                                        children: " login "
+                                    }, void 0, false, {
+                                        fileName: "src/component/Header.js",
+                                        lineNumber: 42,
+                                        columnNumber: 51
+                                    }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/component/Header.js",
                                     lineNumber: 42,
@@ -41358,6 +41380,133 @@ const appStore = (0, _toolkit.configureStore)({
 });
 exports.default = appStore;
 
-},{"@reduxjs/toolkit":"fuua8","./cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gbXMy","1xC6H","bNKaB"], "bNKaB", "parcelRequire164e")
+},{"@reduxjs/toolkit":"fuua8","./cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fhkpV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e6a5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e6a5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _loginBgWebp = require("../../login_bg.webp");
+var _loginBgWebpDefault = parcelHelpers.interopDefault(_loginBgWebp);
+var _s = $RefreshSig$();
+const Login = ()=>{
+    _s();
+    const [isSignIn, setSignIn] = (0, _react.useState)(false);
+    console.log(isSignIn);
+    const toggleButton = ()=>{
+        isSignIn ? setSignIn(false) : setSignIn(true);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "h-[90vh] flex items-center justify-center flex-grow",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _loginBgWebpDefault.default),
+                alt: "login",
+                className: "md:h-full md:block hidden flex-grow"
+            }, void 0, false, {
+                fileName: "src/component/Login.js",
+                lineNumber: 12,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                className: "gap-2 md:w-1/2 w-full h-[60vh] bg-white bg-opacity-90 rounded-lg flex flex-col text-center items-center mx-auto absolute",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "mt-14  text-center font-bold text-2xl md:text-5xl text-gray-600 p-4 m-4",
+                        children: isSignIn ? "Sign In Form" : "Login Form"
+                    }, void 0, false, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 14,
+                        columnNumber: 13
+                    }, undefined),
+                    isSignIn && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mb-2 placeholder:text-orange-400 border border-orange-400 rounded-3xl px-4 py-2 md:w-2/3 w-full focus:border-orange-700 outline-none ",
+                        type: "text",
+                        placeholder: "name"
+                    }, void 0, false, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 15,
+                        columnNumber: 26
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mb-2 placeholder:text-orange-400 border border-orange-400 rounded-3xl px-4 py-2 md:w-2/3 w-full focus:border-orange-700 outline-none ",
+                        type: "text",
+                        placeholder: "email"
+                    }, void 0, false, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 16,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "mb-2 placeholder:text-orange-400 border border-orange-400 rounded-3xl px-4 py-2 md:w-2/3 w-full focus:border-orange-700 outline-none",
+                        type: "password",
+                        placeholder: "password"
+                    }, void 0, false, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 17,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "w-fit mb-2 bg-orange-400 text-white rounded-xl px-4 py-2 mt-3 hover:bg-orange-300",
+                        children: isSignIn ? "Sign In" : "Login"
+                    }, void 0, false, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 18,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "font-semibold text-orange-300",
+                        children: [
+                            isSignIn ? "Already" : "Don't",
+                            " have an account ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "cursor-pointer outline-none font-bold hover:text-black",
+                                onClick: toggleButton,
+                                children: isSignIn ? "Login" : "Sign In"
+                            }, void 0, false, {
+                                fileName: "src/component/Login.js",
+                                lineNumber: 19,
+                                columnNumber: 107
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/component/Login.js",
+                        lineNumber: 19,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/component/Login.js",
+                lineNumber: 13,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/component/Login.js",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Login, "0S8TMn/e4g/xZgSMcZznp/o1bRg=");
+_c = Login;
+exports.default = Login;
+var _c;
+$RefreshReg$(_c, "Login");
+
+  $parcel$ReactRefreshHelpers$e6a5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../login_bg.webp":"1cPA9"}],"1cPA9":[function(require,module,exports) {
+module.exports = require("450000cc3c48101f").getBundleURL("lPpKD") + "login_bg.3f677be6.webp" + "?" + Date.now();
+
+},{"450000cc3c48101f":"lgJ39"}]},["gbXMy","1xC6H","bNKaB"], "bNKaB", "parcelRequire164e")
 
 //# sourceMappingURL=index.0641b553.js.map

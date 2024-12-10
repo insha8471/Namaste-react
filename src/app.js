@@ -12,6 +12,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Cart from "./component/Cart";
 import Contact from "./component/Contact";
 import appStore from "./utils/appStore";
+import Login from "./component/Login";
 
 
 
@@ -59,6 +60,10 @@ const AppRouter = createBrowserRouter([
             {
                 path: "/cart",
                 element: <Cart />
+            },
+            {
+                path: "/login",
+                element: < Login />
             }
         ],
         errorElement: < Error />
