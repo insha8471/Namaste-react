@@ -21,7 +21,7 @@ const Body = () => {
     const [searchText, setSearchText] = useState("");
     const listOfRestaurant = useListOfRestaurant(setFilterListOfRestaurant);
     const onlineStatus = useOnlineStatus();
-    // const [updatedListOfRestaurant, setUpdatedListOfRestaurant] = useState();
+    const [updatedListOfRestaurant, setUpdatedListOfRestaurant] = useState();
 
 
     // console.log(listOfRestaurant)
@@ -36,12 +36,41 @@ const Body = () => {
     // }, 400);
     // console.log(updatedListOfRestaurant);
 
+    // const handelSearch = () => {
+    //     setFilterListOfRestaurant(
+    //         updatedListOfRestaurant?.filter((res) => {
+    //             return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
+    //         })
+    //     )
+    // }
+
     // useEffect(() => {
     //     if (listOfRestaurant) {
-    //         setFilterListOfRestaurant([...listOfRestaurant]);
+    //         setFilterListOfRestaurant([...listOfRestaurant])
     //         setUpdatedListOfRestaurant([...listOfRestaurant]);
     //     }
     // }, [listOfRestaurant]);
+
+    useEffect(() => {
+        setUpdatedListOfRestaurant([...listOfRestaurant]);
+        const timer = setTimeout(() => {
+            if(searchText) {
+                const flag = updatedListOfRestaurant?.some((value) => value?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
+
+                if(flag) {
+                    setFilterListOfRestaurant(
+                        updatedListOfRestaurant?.filter((res) => {
+                            return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
+                        })
+                    )
+                }else{
+                    setFilterListOfRestaurant([...listOfRestaurant])
+                }
+            }else{
+                setFilterListOfRestaurant([...listOfRestaurant]);
+            }
+        }, 300)
+    },[searchText])
  
 
     if(!onlineStatus) {

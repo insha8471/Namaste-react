@@ -28764,7 +28764,7 @@ const Body = ()=>{
     const [searchText, setSearchText] = (0, _react.useState)("");
     const listOfRestaurant = (0, _useListOfRestaurantDefault.default)(setFilterListOfRestaurant);
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
-    // const [updatedListOfRestaurant, setUpdatedListOfRestaurant] = useState();
+    const [updatedListOfRestaurant, setUpdatedListOfRestaurant] = (0, _react.useState)();
     // console.log(listOfRestaurant)
     // const handelSearch = debounce((text) => {
     //     setFilterListOfRestaurant(
@@ -28774,15 +28774,42 @@ const Body = ()=>{
     //     )
     // }, 400);
     // console.log(updatedListOfRestaurant);
+    // const handelSearch = () => {
+    //     setFilterListOfRestaurant(
+    //         updatedListOfRestaurant?.filter((res) => {
+    //             return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
+    //         })
+    //     )
+    // }
     // useEffect(() => {
     //     if (listOfRestaurant) {
-    //         setFilterListOfRestaurant([...listOfRestaurant]);
+    //         setFilterListOfRestaurant([...listOfRestaurant])
     //         setUpdatedListOfRestaurant([...listOfRestaurant]);
     //     }
     // }, [listOfRestaurant]);
+    (0, _react.useEffect)(()=>{
+        setUpdatedListOfRestaurant([
+            ...listOfRestaurant
+        ]);
+        const timer = setTimeout(()=>{
+            if (searchText) {
+                const flag = updatedListOfRestaurant?.some((value)=>value?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
+                if (flag) setFilterListOfRestaurant(updatedListOfRestaurant?.filter((res)=>{
+                    return res?.info?.name.toLowerCase().includes(searchText.toLowerCase());
+                }));
+                else setFilterListOfRestaurant([
+                    ...listOfRestaurant
+                ]);
+            } else setFilterListOfRestaurant([
+                ...listOfRestaurant
+            ]);
+        }, 300);
+    }, [
+        searchText
+    ]);
     if (!onlineStatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _offlineDefault.default), {}, void 0, false, {
         fileName: "src/component/Body.js",
-        lineNumber: 48,
+        lineNumber: 77,
         columnNumber: 16
     }, undefined);
     const { setUserName, loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
@@ -28792,7 +28819,7 @@ const Body = ()=>{
     // }
     return listOfRestaurant.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/component/Body.js",
-        lineNumber: 59,
+        lineNumber: 88,
         columnNumber: 44
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body w-full text-center",
@@ -28815,7 +28842,7 @@ const Body = ()=>{
                             }
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 64,
+                            lineNumber: 93,
                             columnNumber: 25
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -28824,18 +28851,18 @@ const Body = ()=>{
                             className: "text-2xl px-6 pb-2 text-gray-500 cursor-pointer hover:text-orange-300"
                         }, void 0, false, {
                             fileName: "src/component/Body.js",
-                            lineNumber: 70,
+                            lineNumber: 99,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/component/Body.js",
-                    lineNumber: 63,
+                    lineNumber: 92,
                     columnNumber: 13
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 62,
+                lineNumber: 91,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -28848,29 +28875,29 @@ const Body = ()=>{
                                 resData: restaurant
                             }, void 0, false, {
                                 fileName: "src/component/Body.js",
-                                lineNumber: 90,
+                                lineNumber: 119,
                                 columnNumber: 122
                             }, undefined),
                             " "
                         ]
                     }, restaurant.info.id, true, {
                         fileName: "src/component/Body.js",
-                        lineNumber: 90,
+                        lineNumber: 119,
                         columnNumber: 29
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/component/Body.js",
-                lineNumber: 87,
+                lineNumber: 116,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/component/Body.js",
-        lineNumber: 60,
+        lineNumber: 89,
         columnNumber: 10
     }, undefined);
 };
-_s(Body, "dTnxO4QVx5DG3s1b9/uppaSFKoE=", false, function() {
+_s(Body, "Pp78Xmophi1z6FvKBWlnbzE6Fu8=", false, function() {
     return [
         (0, _reactRedux.useDispatch),
         (0, _useListOfRestaurantDefault.default),
