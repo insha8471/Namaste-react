@@ -25,6 +25,7 @@ const AppLayout = () => {
         }
         setUserName(data.name)
     },[])
+    
     return ( 
         <Provider store={appStore}>
             <UserContext.Provider value={{ loggedInUser: userName , setUserName}}>

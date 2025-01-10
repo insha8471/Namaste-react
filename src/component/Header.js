@@ -1,24 +1,60 @@
-import { useContext, useState } from "react";
-import { useSelector } from "react-redux";
-import { Link } from 'react-router-dom';
+import { useContext, useState , useEffect} from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from 'react-router-dom';
 import svgOpenIcon from "../../hamburgerMenuIcon.svg";
 import svgKloseIcon from "../../hamburgercrossIcon.svg";
 import UserContext from '../utils/UserContext';
 import Hamburger from "./Hamburger";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { addUser, removeUser } from "../utils/userSlice";
 
 const Header = () => {
-    const {loggedInUser} = useContext(UserContext);
+    const dispatch = useDispatch();
+    // const {loggedInUser} = useContext(UserContext);
     // console.log(loggedInUser)
-
     const [isOpen , setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     // subscribing to the store using selector
     const carItem = useSelector((store) => store.cart.items);
+    const user = useSelector((store) => store.user);
     // console.log(carItem)
 
     const handleHamburger = () => {
         isOpen ? setIsOpen(false) : setIsOpen(true);
     }
+
+    const handleSignOut = () => {
+        if(user) {
+            signOut(auth).then(() => {
+                dispatch(removeUser());
+                navigate("/login")
+            }).catch((error) => {
+                navigate("/error")
+            });
+        }
+    }
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const {uid , email, displayName } = user;
+                dispatch(addUser({
+                    uid: uid,
+                    email : email,
+                    displayName: displayName
+                }))
+                navigate("/")
+                console.log("hello")
+            } else {
+                dispatch(removeUser());
+                navigate("/login")
+            }
+        });
+
+        return () => unsubscribe();
+    },[])   
 
     return (
         <div className="shadow-sm  w-full py-5 sm:py-7 bg-slate-50">
@@ -39,7 +75,7 @@ const Header = () => {
                     <li className="hidden sm:block px-2 text-lg font-semibold cursor-pointer hover:text-orange-600"><Link to="/contact">contact</Link></li>
                     <li className="bloack px-2 text-lg font-semibold cursor-pointer hover:text-orange-600"><Link to="cart">cart({carItem.length})</Link></li>
                     <div className="hidden sm:block px-2 text-lg font-semibold cursor-pointer hover:text-orange-600">
-                        <button className='login'><Link to={"/login"}> login </Link></button>
+                        <button className='login' onClick={handleSignOut}><Link to={"/login"}>{user ? user.displayName :"login" }</Link></button>
                     </div>
                     {/* <li className="px4 text-lg font-semibold cursor-pointer hover:text-orange-600">{loggedInUser}</li> */}
                     

@@ -9,9 +9,14 @@ import Offline from "./Offline";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import Hamburger from "./Hamburger"
+import { onAuthStateChanged } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser, removeUser } from "../utils/userSlice";
+import { auth } from "../utils/firebase";
 
 const Body = () => {
     // Local State variable
+    const dispatch = useDispatch();
     const [filterListOfRestaurant, setFilterListOfRestaurant] = useState();
     const [searchText, setSearchText] = useState("");
     const listOfRestaurant = useListOfRestaurant(setFilterListOfRestaurant);
@@ -37,7 +42,7 @@ const Body = () => {
     //         setUpdatedListOfRestaurant([...listOfRestaurant]);
     //     }
     // }, [listOfRestaurant]);
-    
+ 
 
     if(!onlineStatus) {
         return <Offline/>
@@ -46,16 +51,16 @@ const Body = () => {
     const {setUserName, loggedInUser} = useContext(UserContext);
 
     // conditional Rendering
-    if( listOfRestaurant.length === 0 ) {
-        return < Shimmer />;
-    }
+    // if( listOfRestaurant.length === 0 ) {
+    //     return < Shimmer />;
+    // }
     
 
-    return (
-        <div className="body w-full text-center">
+    return listOfRestaurant.length === 0 ? < Shimmer /> : (
+         <div className="body w-full text-center">
             {/* < Hamburger />  */}
             <div className="filter flex items-center justify-center text-center my-10">
-                <div className="border-2 border-gray-500 p-1 rounded-3xl sm:w-full md:w-1/2 h-12 flex">
+            <div className="border-2 border-gray-500 p-1 rounded-3xl sm:w-full md:w-1/2 h-12 flex">
                         <input data-testid="searchInput" type="text" className="search-box mx-4 w-full outline-none" placeholder="Search here for Restaurants...." value={searchText} onChange={(e) => {
                             setSearchText(e.target.value);
                             // handelSearch(e.target.value)
@@ -87,7 +92,7 @@ const Body = () => {
                     }                
             </div>
         </div>
-    );
+    ) ;
 };
 
 export default Body;
